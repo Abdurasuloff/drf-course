@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Bosh Sahifa
+{% endblock %}
+{% block content %}
+    <h2 class="mt-3" >So'ngi maqolalar</h2>
+    <div class="cards" >
+        {% for post in posts %}
+            <div class="card mt-3 ">
+                <div class="card-body">
+                    {{post.title}}...<small>  <a class="text-muted" href="{{post.get_absolute_url}}">Read More</a></small>
+              </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
